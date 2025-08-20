@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Folder | FileBase</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.svg">
+</head>
+<body>
+    <%- include("dashnav", {user: user}) %>
+    <main class="addFolMain">
+        <a class="backDash" href=<%= `/dashboard` %>>← Back to Dashboard</a>
+        <form action="/dashboard/addfolder" class="folderForm" method="post">
+            <h2 class="folH">Create New Folder</h2>
+            <label for="name">Name:
+                <input type="text" id="name" name="name">
+            </label>
+            <button class="createFolder">Create Folder</button>
+        </form>
+    </main>
+</body>
+</html>

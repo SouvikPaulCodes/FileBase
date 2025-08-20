@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share File | FileBase</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.svg">
+</head>
+<body>
+    <%- include("dashnav", {user: user}) %>
+    <main class="share">
+        <a class="backDash" href=<%= `/dashboard` %>>← Back to Dashboard</a>
+        <form  class="shareForm" method="post" action=<%= `/dashboard/share/${file}` %>>
+            <label for="valid">Link will be valid for:
+                <select name="valid" id="valid">
+                    <option value="1" selected>1 day</option>
+                    <option value="5">5 days</option>
+                    <option value="10">10 days</option>
+                    <option value="15">15 days</option>
+                    <option value="30">30 days</option>
+                </select>
+            </label>
+            <button class="gen">Generate link</button>
+        </form>
+        <% if(gen && validity) {%>
+            <div class="shareLink">
+                <div class="url">Copy this link to share: 
+                    <a href="<%= gen.signedUrl %>" target="_blank"><%= gen.signedUrl %></a></div>
+                <div class="validity">Valid for: <%= validity %> day(s)</div>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

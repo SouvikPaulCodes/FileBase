@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>FileBase Favicon</title>
+  <desc>Cloud with folder overlay, flat icon</desc>
+  <defs>
+    <style>
+      .cloud { fill: #CFE8FF; }
+      .folder { fill: #FFC033; }
+      .stroke { stroke: #1F2A44; stroke-width: 8; stroke-linejoin: round; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Transparent background -->
+  <rect width="256" height="256" fill="none"/>
+
+  <!-- Cloud (simple overlapped circles + base) -->
+  <g class="cloud">
+    <circle cx="140" cy="120" r="58"/>
+    <circle cx="92" cy="142" r="48"/>
+    <circle cx="188" cy="142" r="44"/>
+    <rect x="60" y="142" width="160" height="36" rx="18" ry="18"/>
+  </g>
+
+  <!-- Folder -->
+  <g class="stroke">
+    <!-- Folder back tab -->
+    <path class="folder" d="M84 110 h46 a10 10 0 0 1 8 4 l8 10 h58 a12 12 0 0 1 12 12 v18 a12 12 0 0 1-12 12 H96 a12 12 0 0 1-12-12 v-32 a12 12 0 0 1 12-12z"/>
+    <!-- Folder front body -->
+    <rect class="folder" x="76" y="134" width="124" height="74" rx="12" ry="12"/>
+  </g>
+</svg>

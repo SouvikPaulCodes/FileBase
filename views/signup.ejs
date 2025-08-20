@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | FileBase</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.svg">
+</head>
+<body>
+    <%- include("nav") %>
+    <main class="signup-main">
+        <form action="/signup" method="post" class="signup">
+            <h2 class="signupH">Sign Up!</h2>
+            <div class="errors">
+                <% console.log(locals.errors); locals.errors?.forEach(error => { %>
+                    <% if(error.path==='username') { %>
+                        <div class="userError">❌ <%= error.msg %></div>
+                    <% } %>
+                    <% if(error.path==='email') { %>
+                        <div class="emailError">❌ <%= error.msg %></div>
+                    <% } %>
+                    <% if(error.path==='password') { %>
+                        <div class="passError">❌ <%= error.msg %></div>
+                    <% } %>
+                    <% if(error.path==='confirm') { %>
+                        <div class="conError">❌ <%= error.msg %></div>
+                    <% } %>
+                <% }) %>
+            </div>
+            <label for="username">Username:
+            <input type="text" id="username" name="username" required>
+            </label>
+            <label for="email">Email:
+            <input type="email" id="email" name="email" required>
+            </label>
+            <label for="password">Password:
+            <input type="password" id="password" name="password" required>
+            </label>
+            <label for="confirm">Confirm Password:
+            <input type="password" id="confirm" name="confirm" required>
+            </label>
+            <button class="signupBut">Sign Up</button>
+        </form>
+        <div class="loginLink">Already a user? <a href="/login">Login!</a></div>
+    </main>
+</body>
+</html>

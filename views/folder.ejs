@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= folder.name %> | FileBase</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.svg">
+</head>
+<body>
+    <%- include("dashnav", {user: user}) %>
+    <div class="folDas">
+        <div class="back">
+            <a class="backDash" href=<%= `/dashboard` %>>← Back to Dashboard</a>
+        </div>
+        <div class="addButFol">
+            <a href=<%= `/dashboard/folder/${folder.id}/addfile` %>><button class="addFile">+ Add File</button></a>
+        </div>
+    </div>
+    <main class="items">
+        <div class="folName">
+            <img src="/images/folder.svg" alt="folder">
+            <h2 class="folText"><%= folder.name %></h2>
+        </div>
+        <div class="header">
+            <div class="nameHead">Name:</div>
+            <div class="createHead">Created At:</div>
+        </div>
+        <% files.forEach(file => { %>
+            <div class="file">
+                <div class="fileName"><%= file.title %></div>
+                <div class="createTime"><%= file.createdAt %></div>
+                <div class="fileFunc">
+                    <a href=<%= `/dashboard/download/${file.id}` %>>
+                        <img src="/images/download.png" alt="download">
+                    </a>
+                    <a href=<%= `/dashboard/share/${file.id}` %>>
+                        <img src="/images/share.png" alt="share">
+                    </a>
+                    <a href=<%= `/dashboard/delete/${file.id}` %>>
+                        <img src="/images/delete.svg" alt="delete">
+                    </a>
+                </div>
+            </div>
+        <% }) %>
+    </main>
+</body>
+</html>

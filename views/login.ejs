@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | FileBase</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.svg">
+</head>
+<body>
+    <%- include("nav") %>
+    <main class="login-main">
+        <form action="/login" method="post" class="login">
+            <h2 class="loginH">Login!</h2>
+            <div class="errors">
+                <% locals.errors?.forEach(error => { %>
+                    <% if(error.path==='username') { %>
+                        <div class="userError"><%= error.msg %></div>
+                    <% } %>
+                    <% if(error.path==='password') { %>
+                        <div class="passError"><%= error.msg %></div>
+                    <% } %>
+                <% }) %>
+            </div>
+            <label for="username">Username:
+            <input type="text" id="username" name="username">
+            </label>
+            <label for="password">Password:
+            <input type="password" id="password" name="password">
+            </label>
+            <button class="loginBut">Login</button>
+        </form>
+        <div class="signupLink">Don't have an account? <a href="/signup">Create an account!</a></div>
+    </main>   
+</body>
+</html>

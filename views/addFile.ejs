@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add File | FileBase</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.svg">
+</head>
+<body>
+    <%- include("dashnav", {user: user}) %>
+    <main class="addFileMain">
+        <a class="backDash" href=<%= `/dashboard` %>>← Back to Dashboard</a>
+        <form action="/dashboard/addfile" class="fileForm" method="post" enctype="multipart/form-data">
+            <h2 class="fileH">Add File</h2>
+            <label for="name">Name:
+                <input type="text" id="name" name="name">
+            </label>
+            <label for="file">Select File:
+                <input type="file" id="file" name="file">
+            </label>
+            <button class="addFile">Add File</button>
+        </form>
+    </main>
+</body>
+</html>

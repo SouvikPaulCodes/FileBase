@@ -1,0 +1,493 @@
+@font-face {
+    font-family: 'techno';
+    src: url('./font/technoraceitalic-ezrwe-webfont.woff2') format('woff2'),
+         url('./font/technoraceitalic-ezrwe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 201, 201);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.index-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgb(141, 141, 252);
+    box-shadow: 0 3px 4px black;
+}
+
+h1 {
+    font-size: 55px;
+    font-family: 'techno', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px 0;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 0;
+}
+
+.links a:hover {
+    border-bottom: 4px solid black;
+}
+
+.index-main {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    flex: 1 0 0;
+    max-width: 60vw;
+}
+
+.catchy {
+    font-size: 35px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.text {
+    font-size: 25px;
+    text-align: center;
+}
+
+.routes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.routes div {
+    font-size: 20px;
+}
+
+.routes div a {
+    text-decoration: none;
+    color: rgb(0, 0, 121);
+}
+
+.routes div a:hover {
+    text-decoration: underline;
+    color: rgb(0, 3, 0);
+}
+
+footer {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+footer img {
+    width: 25px;
+    height: auto;
+}
+
+.signup-main, .login-main {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100%;
+}
+
+.signup, .login {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100%;
+    max-width: 60vw;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    border: 2px solid rgb(53, 53, 53);
+    box-shadow: 2px 2px 5px rgb(75, 75, 75);
+    font-size: 20px;
+}
+
+.errors {
+    color: rgb(255, 105, 105);
+}
+
+.signup input, .login input {
+    font-size: 20px;
+}
+
+.signupH, .loginH {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.signupBut, .loginBut {
+    font-size: 17px;
+    padding: 10px;
+    background-color: rgb(143, 143, 255);
+    border-radius: 15px;
+    border: 2px solid black;
+    transition: transform 0.2s ease-in-out;
+}
+
+.signupBut:hover, .loginBut:hover {
+    transform: scale(1.1);
+    background-color: rgb(116, 255, 116);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginLink, .signupLink {
+    font-size: 20px;
+}
+
+.loginLink a, .signupLink a {
+    text-decoration: none;
+    color: rgb(0, 0, 143);
+}
+
+.loginLink a:hover, .signupLink a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.dash-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgb(141, 141, 252);
+    box-shadow: 0 3px 4px black;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.right a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.right a:hover {
+    color: rgb(150, 67, 67);
+    border: 2px solid rgb(150, 67, 67);
+}
+
+.greet {
+    font-size: 25px;
+}
+
+.addBut {
+    align-self: flex-end;
+    margin: 20px 10px;
+}
+
+.addBut a button {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.addBut a button:hover {
+    background-color: rgb(118, 250, 118);
+    cursor: pointer;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 10px;
+}
+
+.header, .folder, .file {
+    display: grid;
+}
+
+.header, .file {
+    grid-template-columns: 2fr 3fr 1fr;
+    align-items: center;
+}
+
+.header {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 2px solid black;
+}
+
+.folder {
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+    border-bottom: 1px groove black;
+}
+
+.folderName {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+.createTime {
+    padding: 5px 5px;
+}
+
+.file {
+    padding: 5px 5px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px groove black;
+}
+
+.folder a {
+    text-decoration: none;
+    color: black;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.folder:hover, .file:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+.folderName img, .folName img {
+    width: 30px;
+    height: auto;
+}
+
+.folder .folFunc a img, .file .fileFunc a img {
+    padding: 3px;
+    width: 25px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.folder .folFunc a img:hover, .file .fileFunc a img:hover {
+    background-color: rgb(199, 199, 199);
+}
+
+.fileFunc, .folFunc {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.folFunc a {
+    display: flex;
+    justify-content: center;
+}
+
+.fileFunc a, .folFunc a {
+    text-decoration: none;
+}
+
+.backDash {
+    text-decoration: none;
+    color: rgb(0, 0, 126);
+}
+
+.backDash:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.addFolMain, .addFileMain, .fileFolMain, .share {
+    padding: 20px 10px ;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.folDas {
+    display: flex;
+    padding: 20px 10px ;
+    font-size: 20px;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.folName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.createFolder {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.createFolder:hover {
+    background-color: rgb(95, 255, 95);
+    cursor: pointer;
+}
+
+.addFile {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.addFile:hover {
+    background-color: rgb(118, 250, 118);
+    cursor: pointer;
+}
+
+.folderForm, .fileForm, .fileFolderForm {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    max-width: 60vw;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(53, 53, 53);
+}
+
+.folH, .fileH {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.folderForm input, .fileForm input, .fileFolderForm {
+    font-size: 20px;
+}
+
+input[type="file"] {
+    font-size: 15px;
+}
+
+.down {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.down a button {
+    font-size: 20px;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.down a button:hover {
+    transform: scale(1.1);
+    border: 1px solid rgb(125, 125, 255);
+    background-color: rgb(142, 168, 255);
+    cursor: pointer;
+}
+
+.downFile {
+    font-size: 30px;
+}
+
+.share {
+    display: flex;
+    flex-direction: column;
+}
+
+.shareForm {
+    padding: 10px;
+    align-self: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 1px solid black;
+    min-width: 100%;
+}
+
+.shareForm label {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.gen {
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.gen:hover {
+    background-color: black;
+    color: white;
+}
+
+.url {
+    max-width: 100%;
+}
+
+.url a {
+    word-break: break-all;
+}
+
+.shareLink {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.validity {
+    font-weight: 700;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File | FileBase</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/favicon.svg">
+</head>
+<body>
+    <%- include("dashnav", {user: user}) %>
+    <main class="down">
+        <h2 class="downFile"><%= file.title %></h2>
+        <a href=<%= `/dashboard/download/${file.id}/final` %>>
+            <button>Download</button>
+        </a>
+    </main>
+</body>
+</html>
