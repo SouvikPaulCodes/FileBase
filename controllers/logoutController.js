@@ -4,7 +4,13 @@ const logoutController = (req, res, next) => {
             return next(err)
         }
 
-        res.redirect("/")
+        req.session.destroy((err) => {
+            if(err) return next(err)
+
+            res.clearCookie("connect.sid")
+            res.redirect("/")
+        })
+
     })
 }
 

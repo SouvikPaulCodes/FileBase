@@ -2,6 +2,9 @@ const passport = require("../passport")
 const {body, validationResult} = require("express-validator")
 
 const loginGet = (req, res) => {
+    if(req.user) {
+        return res.redirect("/dashboard")
+    }
     res.render("login")
 }
 
