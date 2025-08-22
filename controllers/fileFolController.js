@@ -18,11 +18,12 @@ const fileFolPost = [
     async (req, res) => {
         const currUser = req.user
         const file = req.file
-        const name = req.body.name
+        const name = req.file.originalname
         const folder = req.params.folderid
 
         const {data, error} = await supabase.storage.from('files').upload(`${currUser.username}/${name}`, file.buffer, {
-                                cacheControl: 3600
+                                cacheControl: 3600,
+                                contentType: file.mimetype
                             })
 
         await prisma.file.create({

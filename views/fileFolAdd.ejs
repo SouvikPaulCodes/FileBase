@@ -13,9 +13,6 @@
         <a class="backDash" href=<%= `/dashboard/folder/${folder.id}` %>>← Back to <%= folder.name %></a>
         <form  class="fileFolderForm" method="post" enctype="multipart/form-data" action=<%= `/dashboard/folder/${folder.id}/addfile` %>>
             <h2 class="fileH">Add File</h2>
-            <label for="name">Name:
-                <input type="text" id="name" name="name">
-            </label>
             <label for="file">Select File:
                 <input type="file" id="file" name="file">
             </label>
